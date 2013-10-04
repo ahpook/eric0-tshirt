@@ -43,12 +43,13 @@
 $self = "eric0"
 
 puppetcamp::attendee { $self:
-  ensure => present,
+  ensure    => present,
   location  => 'washington_dc',
-  date    => '2013-11-05',
+  date      => '2013-11-05',
   require   => Presentation['awesome', 'informative'],
   before    => Drink['beer'],
 }
+
 #
 
 
@@ -59,10 +60,10 @@ puppetcamp::attendee { $self:
   drink { 'beer': }
 
 define puppetcamp::attendee( 
-  $self = 'me',
-  $date = 'now',
+  $self     = 'me',
+  $date     = 'now',
   $location = 'here', 
-  $ensure = present,
+  $ensure   = present,
 ) {
 
   notify { $self: 
