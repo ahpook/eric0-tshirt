@@ -1,0 +1,19 @@
+tshirt
+
+This is the tshirt module. It's intended to prevent future
+errors like :
+https://projects.puppetlabs.com/issues/22261
+http://projects.puppetlabs.com/issues/8712
+
+License
+-------
+Apache 2.0
+
+Contact
+-------
+eric0@puppetlabs.com , @ahpook on twitter
+
+Support
+-------
+
+Please log tickets and issues on github.
