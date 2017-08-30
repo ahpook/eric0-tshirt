@@ -39,16 +39,17 @@
 #
 
 # invoke it like this
+class tshirt {
 
-$self = "eric0"
+  $self = 'eric0'
 
-puppetcamp::attendee { $self:
-  ensure    => present,
-  location  => 'washington_dc',
-  date      => '2013-11-05',
-  require   => Presentation['awesome', 'informative'],
-  before    => Drink['beer'],
-}
+  puppetcamp::attendee { $self:
+    ensure   => present,
+    location => 'washington_dc',
+    date     => '2013-11-05',
+    require  => Presentation['awesome', 'informative'],
+    before   => Drink['beer'],
+  }
 
 #
 
@@ -59,27 +60,29 @@ puppetcamp::attendee { $self:
   presentation { 'informative': }
   drink { 'beer': }
 
-define puppetcamp::attendee( 
-  $self     = 'me',
-  $date     = 'now',
-  $location = 'here', 
-  $ensure   = present,
-) {
+  define puppetcamp::attendee(
+    $self     = 'me',
+    $date     = 'now',
+    $location = 'here',
+    $ensure   = present,
+  ) {
 
-  notify { $self: 
-    message => "We're in $location on $date" 
+    notify { $self:
+      message => "We're in ${location} on ${date}"
+    }
+
   }
 
-}
-
-define drink {
-  notify { $title: 
-    message => "We are drinking $title!" 
+  define drink {
+    notify { $title:
+      message => "We are drinking ${title}!"
+    }
   }
-}
 
-define presentation {
-  notify { $title: 
-    message => "This presentation was $title!" 
+  define presentation {
+    notify { $title:
+      message => "This presentation was ${title}!"
+    }
   }
+
 }

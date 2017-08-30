@@ -7,6 +7,7 @@
   "source": "https://github.com/ahpook/eric0-tshirt",
   "project_page": "https://github.com/ahpook/eric0-tshirt/",
   "issues_url": "https://github.com/ahpook/eric0-tshirt/issues",
+  "dependencies": "",
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
